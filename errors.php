@@ -1,4 +1,7 @@
+<?php
+session_start();
 
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,8 +20,13 @@
 
   <body>
     <div class="container text-center mt-5">
-      <p>Заполните все поля.</p>
-      <a href="#">Назад</a>
+      <?php foreach ($_SESSION['errors'] as $error):?>
+        <p><?=$error;?></p>
+        <?php endforeach;?>
+      <a href="/register-form.php">Назад</a>
     </div>
   </body>
 </html>
+<?php
+    exit;
+?>
