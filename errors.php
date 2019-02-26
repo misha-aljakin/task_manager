@@ -20,7 +20,7 @@ session_start();
 
   <body>
     <div class="container text-center mt-5">
-      <?php foreach ($_SESSION['errors'] as $error):?>
+      <?php foreach ($errors as $error):?>
         <p><?=$error;?></p>
         <?php endforeach;?>
       <a href="/register-form.php">Назад</a>

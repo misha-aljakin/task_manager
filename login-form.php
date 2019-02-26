@@ -30,7 +30,7 @@
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
-        <a href="#">Зарегистрироваться</a>
+        <a href="/register-form.php">Зарегистрироваться</a>
         <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
       </form>
     </div>
