@@ -17,16 +17,16 @@
 
   <body>
     <div class="form-wrapper text-center">
-      <form class="form-signin">
+      <form class="form-signin" action="/login.php" method="post">
         <img class="mb-4" src="assets/img/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Авторизация</h1>
         <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" autofocus>
         <label for="inputPassword" class="sr-only">Пароль</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Пароль">
         <div class="checkbox mb-3">
           <label>
-            <input type="checkbox" value="remember-me"> Запомнить меня
+            <input type="checkbox" name="remember" value="remember-me"> Запомнить меня
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>

@@ -1,5 +1,7 @@
 <?php
-session_start();
+include 'config.php';
+
+
 $name = trim($_POST['name']);
 $email = trim($_POST['email']);
 $password = trim($_POST['password']);
@@ -22,7 +24,7 @@ if (!empty($errors)) {
     exit;
 }
 
-$pdo = new PDO('mysql:dbname=task_manager;host=localhost', 'root', 'root');
+
 $statement = $pdo->prepare("SELECT * FROM user WHERE email = :email");
 $statement->execute(['email' => $email]);
 $result = $statement->fetch(2);

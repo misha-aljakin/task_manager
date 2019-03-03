@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,10 +19,7 @@ session_start();
       <?php foreach ($errors as $error):?>
         <p><?=$error;?></p>
         <?php endforeach;?>
-      <a href="/register-form.php">Назад</a>
+      <a href="<?=$_SERVER['HTTP_REFERER'];?>">Назад</a>
     </div>
   </body>
 </html>
-<?php
-    exit;
-?>
